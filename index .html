@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger King</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="container bg-pink">
+
+    <header>
+
+        <!-- navbar started  -->
+        
+        <nav>
+            <div>
+                <div class="navbar d-flex justify-content-between mx-4">
+                    
+                    <i class="fa-solid fa-bars"></i>
+                    
+                    <img src="data:image/png;base64,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" alt="logo" width="80px">
+                    
+                    <div class="d-flex">
+                        <div class="text-center">
+                            <button class="border rounded-pill bg-danger text-white px-3 py-1 mt-3">Sign Up/Sign In</button>
+                        </div>
+                        <div class="text-center">
+                            <button class="border rounded-pill bg-dark text-white px-3 py-1 mt-3"> <i class="fa-solid fa-bag-shopping"></i> &nbsp;$0.00</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar d-flex justify-content-between mx-4">
+                    <div>
+                        <i class="fa-solid fa-location-dot">&nbsp;</i>For Availability <a href="">Choose location</a>
+                    </div>
+                </div>
+                <hr> 
+            </div>
+        </nav>
+
+    </header>
+
+    <!-- navbar ended  -->
+
+    <!-- body started  -->
+
+    <body>
+        <div  class="d-flex justify-content-between  mt-4 row row-cols-1 row-cols-md-2 ">
+            <div>
+                <div class=".text-secondary">
+                    <h1>Start your <br> BK® order.</h1>
+                    
+                    <div>
+                        <button class="border rounded-pill bg-danger text-white px-5 py-3 mt-3"> <i class="fa-solid fa-bag-shopping"></i>&nbsp;Order Pickup</button>
+                    </div>
+                    <div>
+                        <button class="border rounded-pill bg-white text-danger px-5 py-3 mt-3"> <i class="fa-solid fa-motorcycle"></i> &nbsp;Order Pickup</button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="https://cdn.sanity.io/images/czqk28jt/prod_bk_us/b5984bead760d0046d44a327c34f7da9a9e68437-1600x900.jpg?w=1800&q=90&fit=max&auto=format" width="100%" alt="">
+            </div>
+        </div>
+
+        <!-- next  -->
+
+        <div class="d-flex justify-content-between row row-cols-1 row-cols-md-2 mt-3">
+            <div>
+                <div class="bg-white border rounded">
+                    <div class="mt-3 mb-3">
+                        <img src="https://cdn.sanity.io/images/czqk28jt/prod_bk_us/4cd4a736fab4faf00146cd9d7de109d61f2019a0-2000x1000.png?w=989&q=80&fit=max&auto=format" width="100%" alt="">
+                    </div>
+                    <h4>Top a Whopper® your way!</h4><br>
+                    <p>Enter the Million Dollar Whopper® Contest, where your Whopper® creation, your way, could be worth $1 million!* Your first entry earns you a FREE Whopper® with $1+ purchase.</p>
+                    <a href="">See Terms.</a>
+                    <div class="align-items-end">
+                        <button class="border rounded-pill bg-white text-danger px-2 py-1 mt-3">Create your whopper</button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="bg-white">
+                    <div class="mt-3 mb-3">
+                        <img src="https://cdn.sanity.io/images/czqk28jt/prod_bk_us/6fd80633bf404b340cf41f34766a997fa678fff7-2000x1000.png?w=989&q=80&fit=max&auto=format" width="100%" alt="">
+                    </div>
+                    <h4>Slay your a.m. hunger with a Breakfast Meal.</h4><br>
+                    <p>Why just grab a bite for breakfast? Make a meal of it with one of our completely satisfying combos.Your first entry earns you a FREE Whopper® with $1+ purchase.</p>
+                    <a href="">See Terms.</a>
+                    <div class="align-items-end">
+                        <button class="border rounded-pill bg-white text-danger px-2 py-1 mt-3">Order Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>  
+        <div class="d-flex justify-content-between row row-cols-1 row-cols-md-2 mt-3">
+            <div>
+                <div class="bg-white border rounded">
+                    <div class="mt-3 mb-3">
+                        <img src="https://cdn.sanity.io/images/czqk28jt/prod_bk_us/4cd4a736fab4faf00146cd9d7de109d61f2019a0-2000x1000.png?w=989&q=80&fit=max&auto=format" width="100%" alt="">
+                    </div>
+                    <h4>Top a Whopper® your way!</h4><br>
+                    <p>Enter the Million Dollar Whopper® Contest, where your Whopper® creation, your way, could be worth $1 million!* Your first entry earns you a FREE Whopper® with $1+ purchase.</p>
+                    <a href="">See Terms.</a>
+                    <div class="align-items-end">
+                        <button class="border rounded-pill bg-white text-danger px-2 py-1 mt-3">Create your whopper</button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="bg-white border rounded">
+                    <div class="mt-3 mb-3">
+                        <img src="https://cdn.sanity.io/images/czqk28jt/prod_bk_us/4cd4a736fab4faf00146cd9d7de109d61f2019a0-2000x1000.png?w=989&q=80&fit=max&auto=format" width="100%" alt="">
+                    </div>
+                    <h4>Top a Whopper® your way!</h4><br>
+                    <p>Enter the Million Dollar Whopper® Contest, where your Whopper® creation, your way, could be worth $1 million!* Your first entry earns you a FREE Whopper® with $1+ purchase.</p>
+                    <a href="">See Terms.</a>
+                    <div class="align-items-end">
+                        <button class="border rounded-pill bg-white text-danger px-2 py-1 mt-3">Create your whopper</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+    <!-- body ended -->
+
+    <footer>
+        
+    </footer>
+
+
+    
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
